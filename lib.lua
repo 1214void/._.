@@ -7540,6 +7540,10 @@ end
             Library.RegistryMap[TabButton].Properties.BackgroundColor3 = "MainColor"
             TabFrame.Visible = true
 
+		    if self.Highlight then
+		        self.Highlight.Visible = true
+		    end
+
             Tab:Resize()
         end
         Tab.Show = Tab.ShowTab
@@ -7549,6 +7553,10 @@ end
             TabButton.BackgroundColor3 = Library.BackgroundColor
             Library.RegistryMap[TabButton].Properties.BackgroundColor3 = "BackgroundColor"
             TabFrame.Visible = false
+
+            if self.Highlight then
+                self.Highlight.Visible = false
+            end
         end
         Tab.Hide = Tab.HideTab
 
