@@ -3082,7 +3082,7 @@ function Library:CreateWindow(...)
             BackgroundColor3 = Library.AccentColor;
             BorderSizePixel = 0;
             Position = UDim2.new(0, 0, 0, 0);
-            Size = UDim2.new(1, 0, 1, 1);
+            Size = UDim2.new(1, 0, 0, 2);
             Visible = false;
             ZIndex = 2;
             Parent = TabButton;
