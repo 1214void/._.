@@ -7238,7 +7238,12 @@ function Library:CreateWindow(...)
             Parent = TabArea;
         })
 
-        local TabHighlight = Library:Create('Frame', {
+        Library:AddToRegistry(TabButton, {
+            BackgroundColor3 = "BackgroundColor";
+            BorderColor3 = "OutlineColor";
+        })
+
+	    local TabHighlight = Library:Create('Frame', {
             BackgroundColor3 = Library.AccentColor;
             BorderSizePixel = 0;
             Position = UDim2.new(0, 0, 0, 0);
@@ -7248,13 +7253,12 @@ function Library:CreateWindow(...)
             Parent = TabButton;
         });
 
-        Tab.Highlight = TabHighlight;
-
-        Library:AddToRegistry(TabButton, {
-            BackgroundColor3 = "BackgroundColor";
-            BorderColor3 = "OutlineColor";
+	    Library:AddToRegistry(TabHighlight, {
+            BackgroundColor3 = "AccentColor";
         })
-
+	
+		Tab.Highlight = TabHighlight;
+	
         local TabButtonLabel = Library:CreateLabel({
             Position = UDim2.new(0, 0, 0, 0);
             Size = UDim2.new(1, 0, 1, -1);
